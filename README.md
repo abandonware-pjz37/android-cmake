@@ -104,6 +104,10 @@ You can use `adb` to monitor logging messages:
 > /.../Install/android-sdk/platform-tools/adb shell logcat
 ```
 
+### Examples
+
+* [Load libraries](https://github.com/forexample/android-cmake/tree/master/01-load-libraries)
+
 ### Links
 
 * [Hunter package manager](https://github.com/ruslo/hunter)

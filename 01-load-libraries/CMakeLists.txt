@@ -17,6 +17,11 @@ hunter_add_package(Android-Apk)
 list(APPEND CMAKE_MODULE_PATH "${ANDROID-APK_ROOT}")
 include(AndroidApk)
 
+hunter_add_package(Android-SDK)
+message("Path to `android`: ${ANDROID-SDK_ROOT}/android-sdk/tools/android")
+message("Path to `emulator`: ${ANDROID-SDK_ROOT}/android-sdk/tools/emulator")
+message("Path to `adb`: ${ANDROID-SDK_ROOT}/android-sdk/platform-tools/adb")
+
 add_library(
     simple
     SHARED

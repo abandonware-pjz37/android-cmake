@@ -86,7 +86,7 @@ Now you can find it in list of available devices:
 > /.../Install/android-sdk/tools/android list avd
 Available Android Virtual Devices:
     Name: Nexus_6_API_21_WXGA720
-    Path: /Users/ruslanbaratov/.android/avd/Nexus_6_API_21_WXGA720.avd
+    Path: /.../.android/avd/Nexus_6_API_21_WXGA720.avd
   Target: Android 5.0.1 (API level 21)
  Tag/ABI: default/x86
     Skin: wxga720

@@ -110,5 +110,6 @@ You can use `adb` to monitor logging messages:
 
 ### Links
 
+* [Android toolchains](https://github.com/ruslo/polly/wiki/Toolchain-list#android-ndk-xxx)
 * [Hunter package manager](https://github.com/ruslo/hunter)
 * [Collection of CMake toolchains](https://github.com/ruslo/polly)

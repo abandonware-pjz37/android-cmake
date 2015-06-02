@@ -58,3 +58,8 @@ Same for `Release`:
 3: Hello, Android! (Not debug)
 ...
 ```
+
+### Links
+* [OpenCV run.sh script](https://github.com/Itseez/opencv/blob/a28c8d002d69dc8b590a7b7c10393d4266036efc/samples/android/hello-android/run.sh)
+* [android_add_test](https://github.com/hunter-packages/android-apk/blob/8661ed4f85610c2412d58faf1b579e058d6024fc/AndroidApk.cmake#L551)
+* [Android-Apk](https://github.com/ruslo/hunter/wiki/pkg.android.apk)

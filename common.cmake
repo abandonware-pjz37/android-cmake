@@ -6,5 +6,5 @@
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/HunterGate.cmake")
 HunterGate(
     URL "https://github.com/ruslo/hunter/archive/android-005.tar.gz"
-    SHA1 "3a18ecc61cad989aef50abafdaa88c72291eabc5"
+    SHA1 "a26088094228c90f748c41e003c6496a858a5f17"
 )

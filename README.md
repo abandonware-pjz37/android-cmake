@@ -106,6 +106,7 @@ You can use `adb` to monitor logging messages:
 
 ### Examples
 
+* [Console application](https://github.com/forexample/android-cmake/tree/master/00-console)
 * [Load libraries](https://github.com/forexample/android-cmake/tree/master/01-load-libraries)
 
 ### Links

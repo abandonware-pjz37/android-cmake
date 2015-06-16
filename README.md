@@ -108,6 +108,7 @@ You can use `adb` to monitor logging messages:
 
 * [Console application](https://github.com/forexample/android-cmake/tree/master/00-console)
 * [Load libraries](https://github.com/forexample/android-cmake/tree/master/01-load-libraries)
+* [Boost.filesystem console](https://github.com/forexample/android-cmake/tree/master/02-console-boost-filesystem)
 
 ### Links
 

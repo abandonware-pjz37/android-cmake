@@ -11,12 +11,14 @@ add_executable(foo foo.cpp)
 hunter_add_package(Android-Apk)
 list(APPEND CMAKE_MODULE_PATH "${ANDROID-APK_ROOT}")
 
+hunter_add_package(Boost COMPONENTS system filesystem)
+find_package(Boost CONFIG REQUIRED system filesystem)
+target_link_libraries(foo Boost::system Boost::filesystem)
+
 include(AndroidApk) # android_add_test
 
 enable_testing()
 android_add_test(NAME FooTest COMMAND foo)
-android_add_test(NAME FooTestArg COMMAND foo arg)
-android_add_test(NAME FooTestArgs COMMAND foo arg1 arg2 arg3)
 
 hunter_add_package(Android-SDK)
 message("Path to `android`: ${ANDROID-SDK_ROOT}/android-sdk/tools/android")

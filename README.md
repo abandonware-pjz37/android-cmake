@@ -97,6 +97,12 @@ Let's run it:
 > /.../Install/android-sdk/tools/emulator -avd Nexus_6_API_21_WXGA720
 ```
 
+If you need `sdcard` for testing:
+```bash
+> /.../Install/android-sdk/tools/mksdcard 512M "`pwd`/android-sdcard"
+> /.../Install/android-sdk/tools/emulator -sdcard "`pwd`/android-sdcard" -avd Nexus_6_API_21_WXGA720
+```
+
 ### Logging
 
 You can use `adb` to monitor logging messages:

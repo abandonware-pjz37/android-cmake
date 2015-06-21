@@ -103,6 +103,26 @@ If you need `sdcard` for testing:
 > /.../Install/android-sdk/tools/emulator -sdcard "`pwd`/android-sdcard" -avd Nexus_6_API_21_WXGA720
 ```
 
+### Choosing toolchain
+
+#### API version
+
+Take a look at this [wiki](https://en.wikipedia.org/wiki/Android_version_history#Version_history_by_API_level) to pick the version you need. E.g. if your device using Android 4.4 you need API level <= 19, for instance `android-ndk-r10e-api-16-*`.
+
+#### CPU architecture
+
+Run next command to determine CPU architecture of emulator:
+```bash
+> /.../Install/android-sdk/platform-tools/adb -e shell getprop ro.product.cpu.abi
+x86
+```
+
+And this one for device:
+```bash
+> /.../Install/android-sdk/platform-tools/adb -d shell getprop ro.product.cpu.abi
+armeabi-v7a
+```
+
 ### Logging
 
 You can use `adb` to monitor logging messages:

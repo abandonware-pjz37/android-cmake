@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 
   // save\show resulting image
 #if ANDROID
-  imwrite("/mnt/sdcard/HelloAndroid.png", img);
+  imwrite("/data/local/tmp/HelloAndroid.png", img);
 #else
   imshow("test", img);
   waitKey();

@@ -1,0 +1,5 @@
+hunter_config(Android-Google-APIs VERSION 19)
+hunter_config(Android-Google-Repository VERSION 19)
+hunter_config(Android-Intel-x86-Atom-System-Image VERSION 19)
+hunter_config(Android-SDK-Platform VERSION 19_r04)
+hunter_config(Sources-for-Android-SDK VERSION 19)

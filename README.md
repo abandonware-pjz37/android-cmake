@@ -137,6 +137,7 @@ You can use `adb` to monitor logging messages:
 * [Boost.filesystem console](https://github.com/forexample/android-cmake/tree/master/02-console-boost-filesystem)
 * [Boost.iostreams console](https://github.com/forexample/android-cmake/tree/master/03-console-boost-iostreams)
 * [OpenCV console](https://github.com/forexample/android-cmake/tree/master/04-console-opencv)
+* [Qt HelloGL2](https://github.com/forexample/android-cmake/tree/master/05-qt-hellogl2)
 
 ### Links
 

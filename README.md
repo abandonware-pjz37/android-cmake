@@ -139,7 +139,8 @@ You can use `adb` to monitor logging messages:
 * [OpenCV console](https://github.com/forexample/android-cmake/tree/master/04-console-opencv)
 * [Qt HelloGL2](https://github.com/forexample/android-cmake/tree/master/05-qt-hellogl2)
 * [Qt HelloGL2 (with launch target)](https://github.com/forexample/android-cmake/tree/master/06-qt-hellogl2-launch)
-* [QML example](https://github.com/forexample/android-cmake/tree/master/07-mousearea-qml)
+* [Qt QML example](https://github.com/forexample/android-cmake/tree/master/07-mousearea-qml)
+* [Qt QML camera](https://github.com/forexample/android-cmake/tree/master/08-declarative-camera)
 
 ### Links
 

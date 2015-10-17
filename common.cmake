@@ -5,7 +5,7 @@
 # * https://github.com/ruslo/hunter
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/HunterGate.cmake")
 HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.12.22.tar.gz"
-    SHA1 "868408f1f3d8deeaab13f4ebca28b02ec2dfcade"
+    URL "https://github.com/ruslo/hunter/archive/v0.12.23.tar.gz"
+    SHA1 "e1aad873adb4d0cd254c070f3e1a1c181d8daaea"
     ${CONFIG_FILE}
 )

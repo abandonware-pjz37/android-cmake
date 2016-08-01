@@ -29,4 +29,8 @@ add_library(simple SHARED android_main.cpp)
 target_compile_definitions(simple PUBLIC "ANDROID_APP_NAME=\"SimpleApp\"")
 target_link_libraries(simple log android native_app_glue)
 
-android_create_apk(NAME simple DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/apk")
+android_create_apk(
+    BASE_TARGET simple
+    LAUNCH_TARGET launch-simple
+    DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/apk"
+)

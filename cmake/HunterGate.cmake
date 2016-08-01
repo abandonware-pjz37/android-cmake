@@ -287,8 +287,19 @@ function(hunter_gate_download dir)
   endif()
 
   hunter_gate_status_debug("Run generate")
+
+  # Need to add toolchain file too.
+  # Otherwise on Visual Studio + MDD this will fail with error:
+  # "Could not find an appropriate version of the Windows 10 SDK installed on this machine"
+  if(EXISTS "${CMAKE_TOOLCHAIN_FILE}")
+    set(toolchain_arg "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}")
+  else()
+    # 'toolchain_arg' can't be empty
+    set(toolchain_arg "-DCMAKE_TOOLCHAIN_FILE=")
+  endif()
+
   execute_process(
-      COMMAND "${CMAKE_COMMAND}" "-H${dir}" "-B${build_dir}"
+      COMMAND "${CMAKE_COMMAND}" "-H${dir}" "-B${build_dir}" "-G${CMAKE_GENERATOR}" "${toolchain_arg}"
       WORKING_DIRECTORY "${dir}"
       RESULT_VARIABLE download_result
       ${logging_params}
@@ -377,16 +388,16 @@ macro(HunterGate)
     string(COMPARE NOTEQUAL "${HUNTER_GATE_GLOBAL}" "" _have_global)
     string(COMPARE NOTEQUAL "${HUNTER_GATE_FILEPATH}" "" _have_filepath)
 
+    if(_have_unparsed)
+      hunter_gate_user_error(
+          "HunterGate unparsed arguments: ${HUNTER_GATE_UNPARSED_ARGUMENTS}"
+      )
+    endif()
     if(_empty_sha1)
       hunter_gate_user_error("SHA1 suboption of HunterGate is mandatory")
     endif()
     if(_empty_url)
       hunter_gate_user_error("URL suboption of HunterGate is mandatory")
-    endif()
-    if(_have_unparsed)
-      hunter_gate_user_error(
-          "HunterGate unparsed arguments: ${HUNTER_GATE_UNPARSED_ARGUMENTS}"
-      )
     endif()
     if(_have_global)
       if(HUNTER_GATE_LOCAL)

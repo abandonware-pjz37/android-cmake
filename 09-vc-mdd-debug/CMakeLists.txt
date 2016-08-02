@@ -13,11 +13,11 @@ list(APPEND CMAKE_MODULE_PATH "${ANDROID-APK_ROOT}")
 include(AndroidApk) # android_create_apk
 
 hunter_add_package(Android-SDK)
-message("Path to `android`: ${ANDROID-SDK_ROOT}/android-sdk/tools/android")
-message("Path to `emulator`: ${ANDROID-SDK_ROOT}/android-sdk/tools/emulator")
-message("Path to `adb`: ${ANDROID-SDK_ROOT}/android-sdk/platform-tools/adb")
+message(STATUS "Path to `android`: ${ANDROID-SDK_ROOT}/android-sdk/tools/android")
+message(STATUS "Path to `emulator`: ${ANDROID-SDK_ROOT}/android-sdk/tools/emulator")
+message(STATUS "Path to `adb`: ${ANDROID-SDK_ROOT}/android-sdk/platform-tools/adb")
 
-message("Tools -> Options -> Cross Platform -> C++ -> Android: ${ANDROID-SDK_ROOT}/android-sdk")
+message(STATUS "Tools -> Options -> Cross Platform -> C++ -> Android: ${ANDROID-SDK_ROOT}/android-sdk")
 
 # * https://github.com/ruslo/hunter/wiki/pkg.android.modules
 # * https://github.com/hunter-packages/android-cmake

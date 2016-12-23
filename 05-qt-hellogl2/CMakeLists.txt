@@ -2,7 +2,6 @@
 # All rights reserved.
 
 cmake_minimum_required(VERSION 3.0)
-set(CONFIG_FILE FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake")
 include("../common.cmake")
 
 project(AndroidQtHelloGL2)

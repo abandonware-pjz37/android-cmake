@@ -22,17 +22,44 @@
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
-      <meta-data android:name="android.app.lib_name" android:value="declarative-camera"/>
-      <meta-data android:name="android.app.qt_sources_resource_id" android:resource="@array/qt_sources"/>
-      <meta-data android:name="android.app.repository" android:value="default"/>
-      <meta-data android:name="android.app.qt_libs_resource_id" android:resource="@array/qt_libs"/>
-      <meta-data android:name="android.app.bundled_libs_resource_id" android:resource="@array/bundled_libs"/>
+      <meta-data
+          android:name="android.app.lib_name"
+          android:value="declarative-camera"
+      />
+      <meta-data
+          android:name="android.app.qt_sources_resource_id"
+          android:resource="@array/qt_sources"
+      />
+      <meta-data
+          android:name="android.app.repository"
+          android:value="default"
+      />
+      <meta-data
+          android:name="android.app.qt_libs_resource_id"
+          android:resource="@array/qt_libs"
+      />
+      <meta-data
+          android:name="android.app.bundled_libs_resource_id"
+          android:resource="@array/bundled_libs"
+      />
       <!-- Deploy Qt libs as part of package -->
-      <meta-data android:name="android.app.bundle_local_qt_libs" android:value="1"/>
-      <meta-data android:name="android.app.bundled_in_lib_resource_id" android:resource="@array/bundled_in_lib"/>
-      <meta-data android:name="android.app.bundled_in_assets_resource_id" android:resource="@array/bundled_in_assets"/>
+      <meta-data
+          android:name="android.app.bundle_local_qt_libs"
+          android:value="1"
+      />
+      <meta-data
+          android:name="android.app.bundled_in_lib_resource_id"
+          android:resource="@array/bundled_in_lib"
+      />
+      <meta-data
+          android:name="android.app.bundled_in_assets_resource_id"
+          android:resource="@array/bundled_in_assets"
+      />
       <!-- Run with local libs -->
-      <meta-data android:name="android.app.use_local_qt_libs" android:value="1"/>
+      <meta-data
+          android:name="android.app.use_local_qt_libs"
+          android:value="1"
+      />
       <meta-data
           android:name="android.app.libs_prefix"
           android:value="/data/local/tmp/qt/"
@@ -50,9 +77,18 @@
           android:value="org.qtproject.qt5.android.multimedia.QtMultimediaUtils:org.qtproject.qt5.android.multimedia.QtMultimediaUtils"
       />
       <!--  Messages maps -->
-      <meta-data android:value="@string/ministro_not_found_msg" android:name="android.app.ministro_not_found_msg"/>
-      <meta-data android:value="@string/ministro_needed_msg" android:name="android.app.ministro_needed_msg"/>
-      <meta-data android:value="@string/fatal_error_msg" android:name="android.app.fatal_error_msg"/>
+      <meta-data
+          android:value="@string/ministro_not_found_msg"
+          android:name="android.app.ministro_not_found_msg"
+      />
+      <meta-data
+          android:value="@string/ministro_needed_msg"
+          android:name="android.app.ministro_needed_msg"
+      />
+      <meta-data
+          android:value="@string/fatal_error_msg"
+          android:name="android.app.fatal_error_msg"
+      />
       <!--  Messages maps -->
 
       <!-- Splash screen -->
@@ -70,7 +106,7 @@
       <!-- Background running -->
     </activity>
   </application>
-  <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="@ANDROID_NATIVE_API_LEVEL@"/>
+  <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="@CMAKE_SYSTEM_VERSION@"/>
   <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
 
   <!-- The following comment will be replaced upon deployment with default permissions based on the dependencies of the application.

@@ -50,7 +50,12 @@ add_library(
 
 target_link_libraries(declarative-camera Qt5::Quick)
 
-set_target_properties(declarative-camera PROPERTIES VERSION 1.0)
+set_target_properties(
+    declarative-camera
+    PROPERTIES
+    VERSION 1.0
+    DEBUG_POSTFIX ""
+)
 
 hunter_add_package(QtAndroidCMake)
 list(APPEND CMAKE_MODULE_PATH "${QTANDROIDCMAKE_ROOT}")

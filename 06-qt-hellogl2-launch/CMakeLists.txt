@@ -13,7 +13,7 @@ hunter_add_package(Qt)
 find_package(Qt5Widgets REQUIRED)
 
 add_library(
-    preview-qt
+    hellogl2
     SHARED
     glwidget.cpp
     glwidget.h
@@ -26,19 +26,18 @@ add_library(
     window.h
 )
 
-target_link_libraries(preview-qt Qt5::Widgets)
+target_link_libraries(hellogl2 Qt5::Widgets GLESv2)
 
-set_target_properties(preview-qt PROPERTIES VERSION 1.0)
+set_target_properties(hellogl2 PROPERTIES VERSION 1.0)
 
 hunter_add_package(QtAndroidCMake)
 list(APPEND CMAKE_MODULE_PATH "${QTANDROIDCMAKE_ROOT}")
 include(AddQtAndroidApk)
 
 add_qt_android_apk(
-    TARGET preview-qt-apk
-    BASE_TARGET preview-qt
-    LAUNCH_TARGET preview-qt-launch
-    PACKAGE_NAME preview.qt
+    TARGET hellogl2-apk
+    BASE_TARGET hellogl2
+    LAUNCH_TARGET hellogl2-launch
 )
 
 hunter_add_package(Android-SDK)

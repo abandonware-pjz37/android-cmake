@@ -26,7 +26,7 @@ add_library(
     window.h
 )
 
-target_link_libraries(hellogl2 Qt5::Widgets)
+target_link_libraries(hellogl2 Qt5::Widgets GLESv2)
 
 set_target_properties(hellogl2 PROPERTIES VERSION 1.0)
 
@@ -34,7 +34,11 @@ hunter_add_package(QtAndroidCMake)
 list(APPEND CMAKE_MODULE_PATH "${QTANDROIDCMAKE_ROOT}")
 include(AddQtAndroidApk)
 
-add_qt_android_apk(TARGET hellogl2-apk BASE_TARGET hellogl2 INSTALL)
+add_qt_android_apk(
+    TARGET hellogl2-apk
+    BASE_TARGET hellogl2
+    INSTALL
+)
 
 hunter_add_package(Android-SDK)
 message("Path to `android`: ${ANDROID-SDK_ROOT}/android-sdk/tools/android")
